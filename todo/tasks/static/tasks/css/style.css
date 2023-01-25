@@ -1,0 +1,44 @@
+body {
+    background-color: lightsalmon;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 70pt;
+    text-align: center;
+}
+
+.task {
+    font-family: Arial, sans-serif;
+    font-size: 30pt;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form {
+    font-family: Arial, sans-serif;
+    font-size: 20pt;
+    text-align: center;
+    font-weight: bold;
+}
+
+.links {
+    font-family: Arial, sans-serif;
+    font-size: 20pt;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sure {
+    font-family: Arial, sans-serif;
+    font-size: 20pt;
+    text-align: center;
+    font-weight: bold;
+}
+
+.complete {
+    font-family: Arial, sans-serif;
+    font-size: 30pt;
+    text-align: center;
+    font-weight: bold;
+}

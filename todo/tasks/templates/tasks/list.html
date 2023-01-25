@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список задач</title>
+    <link rel="stylesheet" href="{% static 'tasks/css/style.css' %}">
+</head>
+<body>
+    <h1>Список Задач</h1>
+    <br>
+    <div class="form">
+        <form action="/" method="POST">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="Добавить задачу">
+        </form>
+        <br>
+        <br>
+    </div>
+    {% for task in task %}
+    <div>
+        {% if task.complete == True %}
+        <div class="complete">
+            <strike>{{task}}</strike>
+        </div>
+        {% else %}
+        <div class="task">
+            <span><em>{{task}}</em></span>
+        </div>
+        {% endif %}
+        <br>
+        <div class="links">
+            <a href="{% url 'update' task.id %}">Обновить задачу</a>
+            <br>
+            <a href="{% url 'delete' task.id %}">Удалить задачу</a>
+        </div>
+        <br>
+    </div>
+    {% endfor %}
+</body>
+</html>

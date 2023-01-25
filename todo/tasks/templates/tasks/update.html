@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Обновление задач</title>
+    <link rel="stylesheet" href="{% static 'tasks/css/style.css' %}">
+</head>
+<body>
+    <h1>Обновление задач</h1>
+    <br>
+    <br>
+    <div class="sure">
+        <p>Обновление задачи:</p>
+    </div>
+    <div class="form">
+        <form method="POST">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="Обновить задачу">
+        </form>
+        <br>
+    </div>
+</body>
+</html>
